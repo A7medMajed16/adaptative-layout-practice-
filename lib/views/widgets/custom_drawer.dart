@@ -27,7 +27,6 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Drawer(
       backgroundColor: Color(0xffDBDBDB),
-      width: double.infinity,
       child: Column(
         children: [
           DrawerHeader(
