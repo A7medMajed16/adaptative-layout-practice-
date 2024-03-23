@@ -19,21 +19,28 @@ class _HomeViewState extends State<HomeView> {
       key: scaffoldKey,
       drawer: const CustomDrawer(),
       // Returning Scaffold widget as the base structure
-      appBar: AppBar(
-        // Adding AppBar as the app's top bar
-        backgroundColor: Colors.black, // Setting the background color to black
-        leading: IconButton(
-            onPressed: () {
-              scaffoldKey.currentState!.openDrawer(); // Opening the drawer
-            },
-            icon: const Icon(
-              // Adding a leading icon on the left side of the AppBar
-              Icons.menu_rounded, // Using the rounded menu icon
-              color: Colors.white, // Setting the icon color to white
-            )),
-      ),
+      appBar: buildAppBar(context),
       body:
           const HomeViewBody(), // Passing HomeViewBody as the main content area
     );
+  }
+
+  AppBar? buildAppBar(BuildContext context) {
+    return MediaQuery.sizeOf(context).width < 900
+        ? AppBar(
+            // Adding AppBar as the app's top bar
+            backgroundColor:
+                Colors.black, // Setting the background color to black
+            leading: IconButton(
+                onPressed: () {
+                  scaffoldKey.currentState!.openDrawer(); // Opening the drawer
+                },
+                icon: const Icon(
+                  // Adding a leading icon on the left side of the AppBar
+                  Icons.menu_rounded, // Using the rounded menu icon
+                  color: Colors.white, // Setting the icon color to white
+                )),
+          )
+        : null;
   }
 }

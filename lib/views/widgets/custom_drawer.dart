@@ -33,7 +33,7 @@ class CustomDrawer extends StatelessWidget {
             child: Icon(
               Icons.favorite_rounded,
               color: Colors.black,
-              size: 100,
+              size: 80,
             ),
           ),
           CustomDrawerItemsListView(items: items),

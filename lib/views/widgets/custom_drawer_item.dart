@@ -11,16 +11,20 @@ class CustomDrawerItem extends StatelessWidget {
     return ListTile(
       leading: Icon(
         drawerItemMode.icon,
-        size: 40,
+        size: 30,
         color: Colors.grey[600],
       ),
-      title: Text(
-        drawerItemMode.title,
-        style: TextStyle(
-          color: Colors.grey[600],
-          letterSpacing: 4,
-          fontSize: 20,
-          fontWeight: FontWeight.w500,
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          drawerItemMode.title,
+          style: TextStyle(
+            color: Colors.grey[600],
+            letterSpacing: 4,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
     );
