@@ -10,7 +10,7 @@ class CustomList extends StatelessWidget {
       child: SizedBox(
         height: 100,
         child: ListView.builder(
-          itemCount: 10,
+          itemCount: 50,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) => const AspectRatio(
             aspectRatio: 1,

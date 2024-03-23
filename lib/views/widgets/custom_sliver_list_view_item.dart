@@ -20,7 +20,7 @@ class CustomSliverListViewItem extends StatelessWidget {
       /// The container has a grey background color.
       decoration: BoxDecoration(
         /// The color of the container is set to grey with a shade of 700.
-        color: Colors.grey[700],
+        color: Colors.grey[400],
 
         /// The container has a border radius of 16.
         borderRadius: BorderRadius.circular(16),
