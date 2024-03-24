@@ -1,3 +1,4 @@
+import 'package:adaptaive_layout_practice/get_responsive_font_size.dart';
 import 'package:adaptaive_layout_practice/models/drawer_item_model.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class CustomDrawerItem extends StatelessWidget {
     return ListTile(
       leading: Icon(
         drawerItemMode.icon,
-        size: 30,
+        size: getResponsiveFontSize(context, baseFontSize: 30),
         color: Colors.grey[600],
       ),
       title: FittedBox(
@@ -22,7 +23,7 @@ class CustomDrawerItem extends StatelessWidget {
           style: TextStyle(
             color: Colors.grey[600],
             letterSpacing: 4,
-            fontSize: 18,
+            fontSize: getResponsiveFontSize(context, baseFontSize: 18),
             fontWeight: FontWeight.w500,
           ),
         ),
